@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Přednáška 03 – Fyzická vrstva</text></category>
+  </question>
+
+  <!-- Q1: Single – Kroucení vodičů -->
+  <question type="multichoice">
+    <name><text>P03-01 Kroucení vodičů</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Proč se vodiče v kroucené dvojlince <strong>kroutí</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Kroucením vodičů se snižuje vzájemné elektromagnetické rušení (přeslechy).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aby se kabel lépe ohýbal</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Aby se snížilo vzájemné elektromagnetické rušení</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aby se zvýšila mechanická pevnost kabelu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aby se zmenšil průměr kabelu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q2: Multi – Kategorie 10 Gb/s -->
+  <!-- 4 správné (+25%), 3 špatné (-33.33%) -->
+  <question type="multichoice">
+    <name><text>P03-02 Kategorie s 10 Gb/s</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které <strong>kategorie kroucené dvojlinky</strong> podporují rychlost 10 Gb/s? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>10 Gb/s: Cat 6 (omezeně), Cat 6a, Cat 7, Cat 8.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="-33.33333" format="html"><text><![CDATA[<p>Kategorie 5</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Cat 5 podporuje max. 100 Mb/s.</p>]]></text></feedback></answer>
+    <answer fraction="-33.33333" format="html"><text><![CDATA[<p>Kategorie 5e</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Cat 5e podporuje max. 1 Gb/s.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Kategorie 6 (omezeně)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Kategorie 6a</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Kategorie 7</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Kategorie 8</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-33.33333" format="html"><text><![CDATA[<p>Kategorie 3</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q3: T/F – Koaxiál dnes -->
+  <question type="truefalse">
+    <name><text>P03-03 Koaxiální kabel dnes</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Koaxiální kabel se v současných počítačových sítích <strong>stále běžně používá</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. Koaxiální kabel byl svého času populární, ale dnes je v počítačových sítích již historie.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. Koaxiál je v PC sítích dnes historie.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q4: Matching – MM vs SM -->
+  <question type="matching">
+    <name><text>P03-04 Vícevidové vs. jednovidové vlákno</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte typ optického vlákna k jeho <strong>vlastnostem</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>MM: 50/125 nebo 62,5/125 μm, LED, stovky metrů. SM: 9/125 μm, laser, stovky km.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Vícevidové (multi-mode)</p>]]></text><answer><text>Průměr 50/125 nebo 62,5/125 μm, zdroj LED, dosah stovky metrů</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Jednovidové (single-mode)</p>]]></text><answer><text>Průměr 9/125 μm, zdroj laser, dosah stovky kilometrů</text></answer></subquestion>
+  </question>
+
+  <!-- Q5: Multi – Vlastnosti optického vlákna -->
+  <!-- 4 správné (+25%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P03-05 Vlastnosti optického vlákna</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které vlastnosti platí pro <strong>optické vlákno</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Optické vlákno: obrovská šířka pásma, nevyzařuje/není rušeno, dvoubodový spoj, nutné pro venkovní spoje. Je ale dražší a méně pružné.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Obrovská šířka pásma (terabity)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Nevyzařuje a není rušeno elektromagnetickým polem</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Dvoubodový spoj – odbočka nebyla uspokojivě vyřešena</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Nutné pro venkovní spoje (bez interakcí s okolím)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Levnější než kroucená dvojlinka</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Optické vlákno je dražší.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Velmi pružné a snadno manipulovatelné</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Optické vlákno je méně pružné.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q6: Cloze – Koaxiál -->
+  <question type="cloze">
+    <name><text>P03-06 Parametry koaxiálního kabelu</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>koaxiálním kabelu</strong>:</p>
+<p>Typický odpor: {1:SHORTANSWER:=50~=50 Ohmů~=50 ohm} Ohmů.</p>
+<p>Rychlost: kolem {1:SHORTANSWER:=10~=10 Mb/s} Mb/s na vzdálenost {1:SHORTANSWER:=1~=1 km} km.</p>
+<p>Má velkou šířku pásma a {1:SHORTANSWER:=nízký~=nizky~=malý} šum.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Koaxiál: 50 Ohmů, 10 Mb/s na 1 km, nízký šum.</p>]]></text></generalfeedback>
+    <defaultgrade>4</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <!-- Q7: Single – UTP -->
+  <question type="multichoice">
+    <name><text>P03-07 Zkratka UTP</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co znamená zkratka <strong>UTP</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>UTP = Unshielded Twisted Pair – nestíněná kroucená dvojlinka.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Universal Transmission Protocol</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Unshielded Twisted Pair</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ultra Thin Plastic</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Unified Transfer Point</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q8: Multi – ISDN neúspěch -->
+  <!-- 3 správné (+33.33%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P03-08 Neúspěch ISDN</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Proč <strong>ISDN</strong> neuspělo? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ISDN neuspělo kvůli: pomalá standardizace, vysoká cena, 64 kb/s je moc pro hlas a málo pro data/obraz.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Pomalá standardizace</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Vysoká cena</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>64 kb/s je zbytečně mnoho pro hlas, ale málo pro data a obraz</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Nebylo kompatibilní s telefonní sítí</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. ISDN bylo navrženo pro telefonní síť.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Neumožňovalo digitální přenos</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. ISDN je právě digitální síť.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q9: Short answer – ADSL -->
+  <question type="shortanswer">
+    <name><text>P03-09 Zkratka ADSL</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Rozviňte zkratku <strong>ADSL</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ADSL = Asymmetric Digital Subscriber Line.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>Asymmetric Digital Subscriber Line</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>Asymetric Digital Subscriber Line</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*Asymmetric*Digital*Subscriber*</text><feedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q10: Esej – Princip optického vlákna -->
+  <question type="essay">
+    <name><text>P03-10 Princip optického vlákna (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Vysvětlete <strong>princip fungování optického vlákna</strong>. Popište, na jakém fyzikálním jevu je založeno, jakou má strukturu a jaké jsou jeho hlavní výhody oproti metalickým kabelům.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Vzorová odpověď:</strong> Optické vlákno je založeno na totálním odrazu světla. Má dvě vrstvy – jádro a plášť – s vhodnými indexy lomu, takže se světlo udrží uvnitř jádra. Výhody: obrovská šířka pásma (terabity), nevyzařuje a není rušeno, vhodné pro venkovní spoje. Nevýhody: dražší, méně pružné, dvoubodový spoj.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Fyzikální princip – totální odraz / lom světla (0,5 b)</li><li>Struktura – jádro a plášť, indexy lomu (0,5 b)</li><li>Výhody oproti metalickým kabelům (0,5 b)</li><li>Nevýhody (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q11: Esej – MM vs SM -->
+  <question type="essay">
+    <name><text>P03-11 MM vs. SM optická vlákna (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Porovnejte <strong>vícevidová (MM)</strong> a <strong>jednovidová (SM)</strong> optická vlákna. Uveďte rozdíly v průměru, zdroji světla, dosahu a typickém použití.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Vzorová odpověď:</strong> MM: průměr 50/125 nebo 62,5/125 μm, LED, paprsky různoběžné → rozostření → omezený dosah (stovky m – km). SM: průměr 9/125 μm, laser (pozor na oči), paprsky rovnoběžné, dosah stovky km, dražší, pro rychlosti od 10 Gb/s de facto jediná možnost.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>MM: průměr + LED + rozostření (0,5 b)</li><li>MM: dosah stovky m–km (0,5 b)</li><li>SM: průměr + laser (0,5 b)</li><li>SM: dosah stovky km + od 10 Gb/s jediná možnost (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q12: Matching – Kategorie → frekvence -->
+  <question type="matching">
+    <name><text>P03-12 Kategorie → max. frekvence</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte kategorii kroucené dvojlinky k její <strong>maximální frekvenci</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Cat 5/5e: 100 MHz; Cat 6: 250 MHz; Cat 6a: 500 MHz; Cat 7: 600 MHz; Cat 8: 2 GHz.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Cat 5 / 5e</p>]]></text><answer><text>100 MHz</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Cat 6</p>]]></text><answer><text>250 MHz</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Cat 6a</p>]]></text><answer><text>500 MHz</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Cat 7</p>]]></text><answer><text>600 MHz</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Cat 8</p>]]></text><answer><text>2 GHz</text></answer></subquestion>
+  </question>
+
+  <!-- Q13: T/F – ADSL symetrické -->
+  <question type="truefalse">
+    <name><text>P03-13 ADSL – symetrie</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>ADSL</strong> poskytuje symetrické rychlosti – stejnou rychlost pro download i upload.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. ADSL je asymetrické – download je rychlejší než upload (A = Asymmetric).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. ADSL je asymetrické.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q14: Single – DSLAM -->
+  <question type="multichoice">
+    <name><text>P03-14 DSLAM</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>DSLAM</strong> v kontextu ADSL připojení?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>DSLAM je zařízení na straně poskytovatele v ústředně, ke kterému se připojují ADSL modemy zákazníků.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Typ modemu u zákazníka</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Zařízení na straně poskytovatele v ústředně</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Protokol pro šifrování ADSL spojení</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Filtr oddělující hlas od dat</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je splitter.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q15: Multi – Faktory ADSL rychlosti -->
+  <!-- 3 správné (+33.33%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P03-15 Faktory ovlivňující rychlost ADSL</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co ovlivňuje konkrétní dosažitelnou <strong>rychlost ADSL</strong> připojení? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Rychlost ADSL závisí na: vlastnostech místní smyčky (délka, kvalita), použitém vybavení na obou stranách a smlouvě s poskytovatelem.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Délka a kvalita místní smyčky</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Použité vybavení na obou stranách</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Smlouva s poskytovatelem</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Počet připojených telefonů v domácnosti</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Operační systém počítače</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q16: Single – Splitter -->
+  <question type="multichoice">
+    <name><text>P03-16 Splitter</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>splitter</strong> v ADSL připojení?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Splitter směšuje/odděluje telefonní a datový signál na ADSL lince.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Zařízení zesilující signál na dlouhé vzdálenosti</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Zařízení směšující/oddělující telefonní a datový signál</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Typ optického kabelu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Software pro správu ADSL modemu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q17: Esej – ADSL princip -->
+  <question type="essay">
+    <name><text>P03-17 Princip ADSL (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Popište princip technologie <strong>ADSL</strong>. Vysvětlete, jak se využívá existující telefonní vedení, co je splitter, proč je připojení asymetrické a jaké rychlosti nabízí různé varianty xDSL.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Vzorová odpověď:</strong> ADSL využívá faktu, že šířka pásma telefonní linky je uměle omezena filtry. Dostupné pásmo se dělí na kanály: telefon (0–4 kHz), upstream (26–138 kHz), downstream (138–1104 kHz). Splitter odděluje hlas od dat. Asymetrické = download rychlejší. Varianty: ADSL 8/1, ADSL2 12/3,5, ADSL2+ 28/3,5, VDSL 55/3, VDSL2 100/100 Mb/s.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Princip – využití širšího pásma telefonní linky (0,5 b)</li><li>Dělení pásma + splitter (0,5 b)</li><li>Asymetrie – vysvětlení (0,5 b)</li><li>Konkrétní rychlosti variant xDSL (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q18: Short answer – SM průměr -->
+  <question type="shortanswer">
+    <name><text>P03-18 Průměr jednovidového vlákna</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaký je průměr jádra <strong>jednovidového (single-mode)</strong> optického vlákna? (Uveďte v μm.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Jednovidové vlákno: průměr jádra 9 μm (plášť 125 μm), tedy 9/125 μm.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>9</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>9 μm</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>9/125</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>9/125 μm</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q19: Multi – Strukturovaná kabeláž -->
+  <!-- 3 správné (+33.33%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P03-19 Strukturovaná kabeláž</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které tvrzení platí o <strong>strukturované kabeláži</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Strukturovaná kabeláž: společná UTP pro data i telefony, svedena do centra, umožňuje pružné přepojování, zásuvka se může stěhovat.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Společná UTP kabeláž pro data a telefony</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Svedena do jednoho centra, umožňuje pružné přepojování</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Zásuvka se může stěhovat s uživatelem</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Vyžaduje koaxiální kabel</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Používá se UTP.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Každý počítač má samostatný kabel do WAN</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q20: T/F – SM zdroj LED -->
+  <question type="truefalse">
+    <name><text>P03-20 Jednovidové vlákno – zdroj světla</text></name>
+    <questiontext format="html"><text><![CDATA[<p>U <strong>jednovidového</strong> optického vlákna se jako světelný zdroj používá <strong>LED</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. Jednovidové vlákno používá laser. LED se používá u vícevidového vlákna.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. SM vlákno používá laser.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně! SM vlákno používá laser, LED je pro MM.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q21: Cloze – PCM -->
+  <question type="cloze">
+    <name><text>P03-21 Digitální přenos hlasu (PCM)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o digitálním přenosu hlasu (<strong>PCM</strong>):</p>
+<p>PCM znamená {1:SHORTANSWER:=Pulse Code Modulation~=pulse code modulation}.</p>
+<p>Realizuje ji zařízení zvané {1:SHORTANSWER:=codec~=kodek} (COder/DECoder).</p>
+<p>Signál se měří {1:SHORTANSWER:=8000~=8 000} krát za sekundu.</p>
+<p>Výsledný kanál má rychlost {1:SHORTANSWER:=64~=64 kb/s} kb/s.</p>
+<p>Codec je opak {1:SHORTANSWER:=modemu~=modem}.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>PCM = Pulse Code Modulation, codec, 8000× za sekundu, kanál 64 kb/s, opak modemu.</p>]]></text></generalfeedback>
+    <defaultgrade>5</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <!-- Q22: Single – WDM -->
+  <question type="multichoice">
+    <name><text>P03-22 WDM</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>WDM</strong> (Wavelength Division Multiplexing)?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>WDM umožňuje přenos několika nezávislých signálů v jednom optickém vlákně pomocí různých vlnových délek (barev) světla.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Technologie pro bezdrátový přenos dat</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Přenos několika nezávislých signálů v jednom optickém vlákně pomocí různých vlnových délek</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Způsob kroucení vodičů v UTP kabelu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Metoda komprese dat pro ADSL</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q23: Esej – Porovnání médií -->
+  <question type="essay">
+    <name><text>P03-23 Porovnání přenosových médií (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Porovnejte tři hlavní typy přenosových médií: <strong>kroucenou dvojlinku, koaxiální kabel a optické vlákno</strong>. Pro každé médium uveďte typické rychlosti, výhody a nevýhody.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Vzorová odpověď:</strong> Kroucená dvojlinka: nejpopulárnější, 100 Mb/s – 40 Gb/s, levná, snížené rušení kroucením. Koaxiál: dnes historie, 10 Mb/s/km, velká šířka pásma, nízký šum. Optické vlákno: terabity, nevyzařuje, není rušeno, dvoubodový spoj, dražší, dva typy (MM/SM).</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Kroucená dvojlinka – rychlosti, výhody, nevýhody (0,5 b)</li><li>Koaxiál – rychlosti, výhody, dnes historie (0,5 b)</li><li>Optické vlákno – rychlosti, výhody (0,5 b)</li><li>Optické vlákno – nevýhody + dva typy (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q24: Matching – Stínění zkratky -->
+  <question type="matching">
+    <name><text>P03-24 Zkratky stínění kabelů</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>zkratku stínění</strong> k jejímu významu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>U = Unshielded (bez stínění); S = Shielded (oplet); F = Foil (fólie).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>U</p>]]></text><answer><text>Unshielded – bez stínění</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>S</p>]]></text><answer><text>Shielded – oplet</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>F</p>]]></text><answer><text>Foil – fólie</text></answer></subquestion>
+  </question>
+
+</quiz>

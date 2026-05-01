@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7POS1 - procvičování zkouškových otázek</title>
+  <meta name="description" content="Procvičování zkouškových otázek z Počítačových sítí 1 (7POS1)." />
+  <meta property="og:title" content="7POS1 - procvičování zkouškových otázek" />
+  <meta property="og:description" content="Procvičování zkouškových otázek z Počítačových sítí 1 (7POS1)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7POS1 - procvičování zkouškových otázek" />
+  <meta name="twitter:description" content="Procvičování zkouškových otázek z Počítačových sítí 1 (7POS1)." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="top-row">
+      <div class="theme-float" aria-label="Přepínání motivu">
+        <button id="themeToggle" class="theme-switch" type="button" aria-label="Přepnout motiv">
+          <span class="theme-option" aria-hidden="true">Světlý</span>
+          <span class="theme-option" aria-hidden="true">Tmavý</span>
+          <span class="theme-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="hero card-surface">
+        <div>
+          <p class="eyebrow">Počítačové sítě 1</p>
+          <h1>Procvičování zkouškových otázek</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="quizShell" class="quiz-shell card-surface hidden">
+      <header class="quiz-header">
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <p id="progressLabel" class="progress-label">0 %</p>
+        </div>
+      </header>
+
+      <article class="question-card">
+        <div id="questionText" class="question-text"></div>
+        <div id="answerArea" class="answer-area"></div>
+      </article>
+
+      <div class="quiz-actions">
+        <button id="checkButton" class="button primary" type="button">Zkontrolovat</button>
+        <button id="nextButton" class="button secondary" type="button" disabled>Další otázka</button>
+      </div>
+
+      <section id="feedbackArea" class="feedback-area"></section>
+    </section>
+
+    <section id="summaryShell" class="summary-shell card-surface hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Přednáška 02 – Architektura sítě, OSI RM, TCP/IP</text></category>
+  </question>
+
+  <!-- Otázka 1: Single choice – Protokol -->
+  <question type="multichoice">
+    <name><text>P02-01 Co je protokol</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Co je v kontextu vrstvené architektury sítě <strong>„protokol"</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Protokol definuje, jak se domlouvají dva partneři na stejné vrstvě (hlavičky, dotazy, odpovědi, příkazy). Je nezávislý na implementaci a umožňuje interoperabilitu.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Fyzický kabel spojující dva počítače</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně. Kabel je fyzické médium, nikoli protokol.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Pravidla, jak se domlouvají dva partneři na stejné vrstvě</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Definice služeb nabízených nadřízené vrstvě</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně. Toto popisuje rozhraní (interface), nikoli protokol.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Operační systém síťového zařízení</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <!-- Otázka 2: Multi choice – Vlastnosti vrstvené architektury -->
+  <!-- 4 správné (+25%), 3 špatné (-33.33%) -->
+  <question type="multichoice">
+    <name><text>P02-02 Vlastnosti vrstvené architektury</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Které vlastnosti platí pro <strong>vrstvenou architekturu</strong> sítě? (Vyberte všechny správné.)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Správné: komunikace stejných vrstev, předávání podřízené vrstvě, nezávislost vrstev, skutečný přenos nejnižší vrstvou.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="25" format="html">
+      <text><![CDATA[<p>Navzájem komunikují komponenty ve stejné vrstvě</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text><![CDATA[<p>Vytvořené zprávy předávají k doručení podřízené vrstvě</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text><![CDATA[<p>Vrstvy jsou navzájem nezávislé – změna protokolu se ostatních nedotkne</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="25" format="html">
+      <text><![CDATA[<p>Skutečný přenos zajišťuje nejnižší vrstva</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>Každá vrstva rozumí datům všech ostatních vrstev</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně. Vrstva dostává data od vyšší vrstvy a nerozumí jim.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>Změna protokolu v jedné vrstvě vyžaduje změnu všech vrstev</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně. Vrstvy jsou nezávislé.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<p>Data se přenášejí přímo mezi partnerskými vrstvami bez podřízených vrstev</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně. Data se předávají podřízeným vrstvám k doručení.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <!-- Otázka 3: True/False – OSI 7 vrstev -->
+  <question type="truefalse">
+    <name><text>P02-03 OSI RM – počet vrstev</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Referenční model OSI definuje <strong>7 vrstev</strong>.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Ano, OSI RM má 7 vrstev: fyzická, spojová, síťová, transportní, relační, prezentační, aplikační.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html"><text><![CDATA[<p>Nesprávně. OSI RM má skutečně 7 vrstev.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <!-- Otázka 4: Matching – OSI vrstvy → funkce -->
+  <question type="matching">
+    <name><text>P02-04 OSI vrstvy → funkce</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Přiřaďte vrstvu modelu OSI k její <strong>hlavní funkci</strong>.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Fyzická – přenos bitů; Spojová – řízení přenosu, detekce chyb; Síťová – směrování; Transportní – přizpůsobení potřebám aplikace; Aplikační – konkrétní služby.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion format="html">
+      <text><![CDATA[<p>Fyzická (1)</p>]]></text>
+      <answer><text>Vlastní přenos bitů, konektory, kabely, napětí</text></answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Spojová (2)</p>]]></text>
+      <answer><text>Řízení přenosu, paketizace, přístup k médiu, detekce chyb</text></answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Síťová (3)</p>]]></text>
+      <answer><text>Směrování, hledání cest, vyvažování zátěže</text></answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Transportní (4)</p>]]></text>
+      <answer><text>Přizpůsobení vlastností sítě potřebám aplikace, správa spojení</text></answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Aplikační (7)</p>]]></text>
+      <answer><text>Protokoly konkrétních služeb (e-mail, přenos souborů)</text></answer>
+    </subquestion>
+  </question>
+
+  <!-- Otázka 5: Multi choice – Vrstvy OSI -->
+  <!-- 6 správných (+16.67%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P02-05 Vrstvy modelu OSI</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Které z následujících jsou vrstvy modelu <strong>OSI</strong>? (Vyberte všechny správné.)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>7 vrstev OSI: fyzická, spojová, síťová, transportní, relační, prezentační, aplikační. „Přizpůsobení médiu" patří do TCP/IP, „zabezpečovací" vrstva neexistuje.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="16.66667" format="html"><text><![CDATA[<p>Fyzická</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně. Vrstva 1.</p>]]></text></feedback></answer>
+    <answer fraction="16.66667" format="html"><text><![CDATA[<p>Spojová</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně. Vrstva 2.</p>]]></text></feedback></answer>
+    <answer fraction="16.66667" format="html"><text><![CDATA[<p>Síťová</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně. Vrstva 3.</p>]]></text></feedback></answer>
+    <answer fraction="16.66667" format="html"><text><![CDATA[<p>Transportní</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně. Vrstva 4.</p>]]></text></feedback></answer>
+    <answer fraction="16.66667" format="html"><text><![CDATA[<p>Relační</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně. Vrstva 5.</p>]]></text></feedback></answer>
+    <answer fraction="16.66667" format="html"><text><![CDATA[<p>Prezentační</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně. Vrstva 6.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Přizpůsobení médiu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Toto je vrstva architektury TCP/IP, nikoli OSI.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Zabezpečovací</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Taková vrstva v OSI neexistuje.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 6: Cloze – TCP/IP architektura -->
+  <question type="cloze">
+    <name><text>P02-06 Architektura TCP/IP – doplňování</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Doplňte chybějící údaje o architektuře <strong>TCP/IP</strong>:</p>
+<p>Síťová vrstva Internetu používá protokol {1:SHORTANSWER:=IP~=ip}, který je {1:SHORTANSWER:=nespojovaný~=nespojovany~=connectionless} a bez záruk.</p>
+<p>Na transportní vrstvě jsou dva hlavní protokoly: {1:SHORTANSWER:=TCP~=tcp} (spojovaný, spolehlivý) a {1:SHORTANSWER:=UDP~=udp} (nespojovaný, bez záruk).</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>IP – nespojovaný; TCP – spojovaný, spolehlivý; UDP – nespojovaný, bez záruk.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>4</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <!-- Otázka 7: Single choice – Transportní vrstva -->
+  <question type="multichoice">
+    <name><text>P02-07 Úkol transportní vrstvy</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Jaký je hlavní úkol <strong>transportní vrstvy</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Transportní vrstva přizpůsobuje vlastnosti sítě (vrstev 1–3) potřebám aplikace a zajišťuje rozlišení aplikací.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Zajistit fyzický přenos bitů po médiu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Toto je úkol fyzické vrstvy.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Směrovat pakety mezi sítěmi</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Směrování je úkolem síťové vrstvy.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Přizpůsobit vlastnosti sítě potřebám aplikace a rozlišovat aplikace</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Kódovat data do formátu ASCII</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Kódování dat spadá pod prezentační vrstvu OSI.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 8: Multi choice – Proč OSI neuspělo -->
+  <!-- 4 správné (+25%), 3 špatné (-33.33%) -->
+  <question type="multichoice">
+    <name><text>P02-08 Důvody neúspěchu OSI</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Které důvody vedly k <strong>neúspěchu modelu OSI</strong> v praxi? (Vyberte všechny správné.)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>OSI neuspělo kvůli: schizmatu spojované/nespojované, nekompatibilitě verzí, nepružným procedurám a pomalému vývoji, nedostatku a drahým implementacím.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Nekompatibility různých verzí</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Nepružné procedury a pomalý vývoj</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Nedostatek a vysoká cena implementací</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Schizma mezi spojovanými a nespojovanými službami</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-33.33333" format="html"><text><![CDATA[<p>Nedostatečný počet vrstev</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. OSI mělo 7 vrstev, což byl kompromis.</p>]]></text></feedback></answer>
+    <answer fraction="-33.33333" format="html"><text><![CDATA[<p>Nezájem ze strany vlády USA</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Vláda USA OSI naopak oficiálně podporovala.</p>]]></text></feedback></answer>
+    <answer fraction="-33.33333" format="html"><text><![CDATA[<p>Příliš úzké zaměření na jednu technologii</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. OSI mělo být naopak univerzální.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 9: Short answer – ISO, 1983 -->
+  <question type="shortanswer">
+    <name><text>P02-09 Tvůrce OSI RM</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Která organizace vytvořila referenční model OSI a v jakém roce? (Uveďte ve formátu „organizace, rok".)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>OSI RM vytvořila organizace ISO v roce 1983.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>ISO, 1983</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>ISO 1983</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>ISO v roce 1983</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*ISO*</text><feedback format="html"><text><![CDATA[<p>Částečně správně – chybí rok.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 10: Esej – Spojované vs. nespojované -->
+  <question type="essay">
+    <name><text>P02-10 Spojované vs. nespojované služby (esej)</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Porovnejte <strong>spojované (connection-oriented)</strong> a <strong>nespojované (connectionless)</strong> služby. Uveďte principy, výhody a nevýhody každého přístupu a jejich analogie z běžného života.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Vzorová odpověď:</strong> Spojované: naváží spojení, data protékají (telefon), dodržují pořadí, menší nároky. Nespojované: každý paket samostatně (dopisy), pružnější, robustnější, reagují na změny, univerzálnější, lépe odpovídají charakteru sítí.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html">
+      <text><![CDATA[<ul>
+<li>Princip spojovaných služeb + analogie telefon (0,5 b)</li>
+<li>Výhody spojovaných: pořadí, menší nároky (0,5 b)</li>
+<li>Princip nespojovaných + analogie dopisy (0,5 b)</li>
+<li>Výhody nespojovaných: pružnost, robustnost, univerzálnost (0,5 b)</li>
+</ul>]]></text>
+    </graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Otázka 11: Esej – OSI vs TCP/IP -->
+  <question type="essay">
+    <name><text>P02-11 OSI RM vs. TCP/IP (esej)</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Porovnejte <strong>referenční model OSI</strong> a <strong>architekturu TCP/IP</strong>. Popište hlavní strukturní rozdíly a vysvětlete, proč se v praxi prosadil model TCP/IP.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Vzorová odpověď:</strong> OSI: 7 vrstev (fyzická, spojová, síťová, transportní, relační, prezentační, aplikační). TCP/IP: 4 vrstvy (existující technologie, síťová, transportní, aplikační). TCP/IP nemá relační a prezentační vrstvu. TCP/IP vychází z existujících technologií a definuje jen přizpůsobení médiu. Prosadil se díky pružnějšímu vývoji, dostupným implementacím a nespojovanému IP.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html">
+      <text><![CDATA[<ul>
+<li>Správný počet a výčet vrstev OSI (0,5 b)</li>
+<li>Správný počet a popis vrstev TCP/IP (0,5 b)</li>
+<li>Identifikace chybějících vrstev (relační, prezentační) (0,5 b)</li>
+<li>Důvody prosazení TCP/IP (0,5 b)</li>
+</ul>]]></text>
+    </graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Otázka 12: Matching – Protokol → vrstva TCP/IP -->
+  <question type="matching">
+    <name><text>P02-12 Protokol → vrstva TCP/IP</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Přiřaďte <strong>protokol</strong> ke správné vrstvě architektury <strong>TCP/IP</strong>.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>HTTP → aplikační; TCP → transportní; IP → síťová; Ethernet → existující technologie.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>HTTP</p>]]></text><answer><text>Aplikační vrstva</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>TCP</p>]]></text><answer><text>Transportní vrstva</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>IP</p>]]></text><answer><text>Síťová vrstva</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Ethernet</p>]]></text><answer><text>Existující technologie (spojová)</text></answer></subquestion>
+  </question>
+
+  <!-- Otázka 13: True/False – IP je spojovaný -->
+  <question type="truefalse">
+    <name><text>P02-13 IP – typ služby</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Protokol <strong>IP</strong> je spojovaný (connection-oriented) protokol.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Nepravda. IP je nespojovaný (connectionless) protokol bez záruk.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. IP je nespojovaný.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně! IP je nespojovaný protokol.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 14: Single choice – Rozhraní -->
+  <question type="multichoice">
+    <name><text>P02-14 Co je rozhraní</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Co je v kontextu vrstvené architektury sítě <strong>„rozhraní" (interface)</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Rozhraní je definice služeb nabízených nadřízené vrstvě. Implementace je skryta uvnitř vrstvy a rozhraní závisí na implementaci (OS).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Síťový konektor RJ-45</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. RJ-45 je fyzický konektor.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Pravidla komunikace mezi dvěma partnery na stejné vrstvě</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Toto popisuje protokol.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Definice služeb nabízených nadřízené vrstvě, závislá na implementaci</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Protokol pro přenos souborů</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 15: Multi choice – Transportní protokoly TCP/IP -->
+  <!-- 2 správné (+50%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P02-15 Transportní protokoly TCP/IP</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Které protokoly pracují na <strong>transportní vrstvě</strong> architektury TCP/IP? (Vyberte všechny správné.)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Na transportní vrstvě TCP/IP pracují TCP a UDP. IP je na síťové vrstvě, HTTP na aplikační.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="50" format="html"><text><![CDATA[<p>TCP</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="50" format="html"><text><![CDATA[<p>UDP</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>IP</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IP je na síťové vrstvě.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>HTTP</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. HTTP je na aplikační vrstvě.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 16: Single choice – Prezentační vrstva -->
+  <question type="multichoice">
+    <name><text>P02-16 Kódování a šifrování – vrstva OSI</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Která vrstva OSI RM se zabývá <strong>kódováním dat</strong> (ASCII, UTF), <strong>šifrováním</strong> a <strong>komprimací</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Prezentační vrstva (vrstva 6) se zabývá významem přenášených dat, jejich kódováním, šifrováním a komprimací.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aplikační</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Aplikační vrstva se zabývá konkrétními službami.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Relační</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Relační vrstva řeší řízení dialogu a synchronizaci.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Prezentační</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Transportní</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Transportní vrstva přizpůsobuje služby aplikacím.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 17: Esej – Zapouzdření -->
+  <question type="essay">
+    <name><text>P02-17 Zapouzdření / encapsulation (esej)</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Vysvětlete princip <strong>zapouzdření (encapsulation)</strong> dat ve vrstvené architektuře. Popište, co se děje s daty při průchodu vrstvami od odesílatele k příjemci.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Vzorová odpověď:</strong> Při odesílání každá vrstva přidá ke zprávě svou hlavičku a předá ji podřízené vrstvě. Na straně příjemce se postupuje opačně – každá vrstva odebere svou hlavičku a předá data nadřízené vrstvě. Fyzický přenos zajišťuje nejnižší vrstva. Každá vrstva dostává od vyšší vrstvy data a nerozumí jejich obsahu.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html">
+      <text><![CDATA[<ul>
+<li>Přidávání hlaviček při odesílání (0,5 b)</li>
+<li>Odebírání hlaviček při příjmu (0,5 b)</li>
+<li>Předávání mezi vrstvami (0,5 b)</li>
+<li>Fyzický přenos nejnižší vrstvou / vrstvy nerozumí datům (0,5 b)</li>
+</ul>]]></text>
+    </graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Otázka 18: Short answer – TCP -->
+  <question type="shortanswer">
+    <name><text>P02-18 Zkratka TCP</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Rozviňte zkratku <strong>TCP</strong>.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>TCP = Transmission Control Protocol.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>Transmission Control Protocol</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>transmission control protocol</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*Transmission*Control*</text><feedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 19: Multi choice – Spojované služby -->
+  <!-- 3 správné (+33.33%), 2 špatné (-50%) -->
+  <question type="multichoice">
+    <name><text>P02-19 Vlastnosti spojovaných služeb</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Které vlastnosti platí pro <strong>spojované (connection-oriented)</strong> služby? (Vyberte všechny správné.)</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Spojované: naváží spojení, data protékají, dodržuje se pořadí.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Před přenosem dat se naváže spojení</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Data protékají vytvořeným spojením</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Dodržuje se pořadí dat</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Každý paket je přepravován samostatnou cestou</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Toto platí pro nespojované služby.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Lépe odpovídají charakteru sítí než nespojované</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Naopak nespojované lépe odpovídají charakteru sítí.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 20: True/False – TCP nespojovaný -->
+  <question type="truefalse">
+    <name><text>P02-20 TCP – typ služby</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Protokol <strong>TCP</strong> je nespojovaný (connectionless) protokol bez záruk.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Nepravda. TCP je spojovaný (connection-oriented) a spolehlivý protokol. Nespojovaný a bez záruk je UDP.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. TCP je spojovaný a spolehlivý.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně! TCP je spojovaný a spolehlivý protokol.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 21: Cloze – OSI RM vrstvy -->
+  <question type="cloze">
+    <name><text>P02-21 Vrstvy OSI RM – doplňování</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Doplňte chybějící údaje o vrstvách <strong>OSI RM</strong>:</p>
+<p>Vrstva číslo 1 se nazývá {1:SHORTANSWER:=fyzická~=physical} a zajišťuje přenos bitů.</p>
+<p>Vrstva číslo 3 se nazývá {1:SHORTANSWER:=síťová~=sitova~=network} a zajišťuje {1:SHORTANSWER:=směrování~=smerovani~=routing}.</p>
+<p>Vrstva číslo 6 se nazývá {1:SHORTANSWER:=prezentační~=presentation~=prezentacni} a zabývá se kódováním, šifrováním a komprimací dat.</p>
+<p>Celkový počet vrstev v OSI RM je {1:SHORTANSWER:=7~=sedm}.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Vrstva 1 – fyzická; vrstva 3 – síťová (směrování); vrstva 6 – prezentační; celkem 7 vrstev.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>5</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <!-- Otázka 22: Single choice – IP na síťové vrstvě -->
+  <question type="multichoice">
+    <name><text>P02-22 Společný jazyk Internetu</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Který protokol tvoří <strong>„společný jazyk celého Internetu"</strong> na síťové vrstvě a zajišťuje interoperabilitu?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>IP (Internet Protocol) je společný jazyk celého Internetu na síťové vrstvě.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>TCP</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. TCP je transportní protokol.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>UDP</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. UDP je transportní protokol.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>IP</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně! IP je společný jazyk Internetu.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>HTTP</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. HTTP je aplikační protokol.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Otázka 23: Esej – Proč OSI neuspělo -->
+  <question type="essay">
+    <name><text>P02-23 Neúspěch OSI RM (esej)</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Proč referenční model OSI v praxi <strong>neuspěl</strong>, přestože byl v 80. letech považován za budoucnost sítí a byl oficiálně podporován vládou USA? Uveďte alespoň <strong>čtyři</strong> konkrétní důvody.</p>
+<p><em>(Očekávaná délka: 5–10 vět.)</em></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Vzorová odpověď:</strong> 1) Schizma mezi spojovanými a nespojovanými službami. 2) Nekompatibility verzí. 3) Nepružné procedury, pomalý vývoj. 4) Nedostatek a drahé implementace. OSI zůstalo jen jako obecný referenční model.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit>
+    <attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html">
+      <text><![CDATA[<ul>
+<li>Schizma spojované/nespojované (0,5 b)</li>
+<li>Nekompatibilita verzí (0,5 b)</li>
+<li>Pomalý vývoj / nepružné procedury (0,5 b)</li>
+<li>Nedostatek / cena implementací (0,5 b)</li>
+</ul>]]></text>
+    </graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Otázka 24: Matching – Vrstvy TCP/IP → role -->
+  <question type="matching">
+    <name><text>P02-24 Vrstvy TCP/IP → role</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Přiřaďte <strong>vrstvu architektury TCP/IP</strong> k její roli.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Aplikační – konkrétní služby; Transportní – přizpůsobení potřebám; Síťová – IP; Přizpůsobení médiu – přenos IP po dané technologii.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Aplikační vrstva</p>]]></text><answer><text>Protokoly konkrétních služeb (HTTP, FTP, SMTP, DNS)</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Transportní vrstva</p>]]></text><answer><text>TCP (spolehlivý) a UDP (bez záruk) – přizpůsobení potřebám aplikace</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Síťová vrstva</p>]]></text><answer><text>IP – nespojovaný, společný jazyk Internetu</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Přizpůsobení médiu</p>]]></text><answer><text>Jak přenášet IP po dané technologii nižší vrstvy</text></answer></subquestion>
+  </question>
+
+</quiz>

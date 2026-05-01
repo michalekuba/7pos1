@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category><text>$course$/Přednáška 06 – Alternativy Ethernetu, VLAN</text></category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-01 Token Ring přístup k médiu</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jak je řízen přístup k médiu v technologii <strong>Token Ring</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>V kruhu obíhá token. Stanice čeká na token, zadrží jej, odešle data a pošle token dál.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Metodou CSMA/CD</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. CSMA/CD je Ethernet.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>V kruhu obíhá token – stanice čeká na token, zadrží jej, odešle data a pošle dál</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Centrální řadič přiděluje časové sloty</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Stanice vysílají kdykoli bez koordinace</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-02 Vlastnosti FDDI</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které vlastnosti platí pro technologii <strong>FDDI</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>FDDI: 100 Mb/s, vícevidová optika, dva protiběžné kruhy, dosah 200 km.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Rychlost 100 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Vícevidová optická vlákna</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Dva protiběžné kruhy – primární a sekundární</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Celkový dosah až 200 km</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Používá koaxiální kabel</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. FDDI používá optická vlákna.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Přenosová rychlost 10 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. FDDI má 100 Mb/s.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="truefalse">
+    <name><text>P06-03 ATM úspěch</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>ATM</strong> v praxi uspělo a nahradilo Ethernet jako dominantní technologii LAN.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. ATM neuspělo kvůli ceně, odlišnosti, pomalé standardizaci a absenci gigabitových rychlostí.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="matching">
+    <name><text>P06-04 Technologie → vlastnost</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>technologii</strong> k její vlastnosti.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Token Ring: kruh+token+IBM. FDDI: dva kruhy+optika+100 Mb/s. ATM: buňky 53 B+QoS. VLAN: softwarová podsíť.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Token Ring</p>]]></text><answer><text>Kruhová topologie, token, 4/16 Mb/s, IBM</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>FDDI</p>]]></text><answer><text>Dva protiběžné kruhy, optika, 100 Mb/s, 200 km</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>ATM</p>]]></text><answer><text>Buňky 53 B, spojovaná služba, QoS, 25/155/622 Mb/s</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>VLAN (802.1Q)</p>]]></text><answer><text>Softwarově konfigurovatelná podsíť v rámci Ethernetu</text></answer></subquestion>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-05 Důvody neúspěchu ATM</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Proč <strong>ATM neuspělo</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ATM: radikálně odlišné, problematická spolupráce, pomalá standardizace, drahé, bez gigabitových rychlostí.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Radikálně odlišné, problematická spolupráce s jinými technologiemi</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Pomalá standardizace a nekompatibility</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Drahé</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Nenabídlo gigabitové rychlosti</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Nebylo určeno pro přenos videa</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. ATM mělo být univerzální (audio, video, data).</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Používalo příliš velké rámce</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. ATM buňky jsou naopak velmi malé (53 B).</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="cloze">
+    <name><text>P06-06 ATM buňky a okruhy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>ATM</strong>:</p>
+<p>ATM buňka má konstantní velikost {1:SHORTANSWER:=53~=53 B~=53 bajtů} bajtů.</p>
+<p>Z toho {1:SHORTANSWER:=5~=5 B} B hlavička a {1:SHORTANSWER:=48~=48 B} B data.</p>
+<p>ATM používá {1:SHORTANSWER:=spojovanou~=spojovaná} službu.</p>
+<p>Permanentní okruh se označuje {1:SHORTANSWER:=PVC~=pvc}.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ATM: buňka 53 B (5+48), spojovaná služba, PVC/SVC.</p>]]></text></generalfeedback>
+    <defaultgrade>5</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-07 Co je VLAN</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>VLAN</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>VLAN je část síťové infrastruktury, která se softwarově chová jako samostatná LAN.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Virtuální privátní síť pro šifrovanou komunikaci přes Internet</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je VPN.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Část síťové infrastruktury, která se softwarově chová jako samostatná LAN</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Speciální typ optického vlákna</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Bezdrátová síť s centrálním řízením</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-08 ATM QoS třídy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které <strong>přenosové třídy</strong> definuje ATM pro QoS? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ATM QoS třídy: CBR, VBR, ABR.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>CBR – konstantní přenosová rychlost</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>VBR – průměrná rychlost + omezený počet buněk ve shluku</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>ABR – proměnlivá rychlost, omezená ztrátovost</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>DBR – dynamická bitová rychlost</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Neexistuje.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>FBR – fixní bitová rychlost</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Neexistuje.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="shortanswer">
+    <name><text>P06-09 Standard pro VLAN</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaký standard definuje <strong>značkování VLAN</strong> v ethernetových rámcích?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IEEE 802.1Q.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>IEEE 802.1Q</text></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>802.1Q</text></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>802.1q</text></answer>
+  </question>
+
+  <question type="essay">
+    <name><text>P06-10 ATM (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Popište technologii <strong>ATM</strong>: princip buněk a okruhů, koncept QoS a důvody neúspěchu.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ATM: univerzální technologie, buňky 53 B, spojovaná služba (PVC/SVC), QoS s třídami CBR/VBR/ABR. Neuspělo kvůli odlišnosti, ceně, pomalé standardizaci, absenci gigabitových rychlostí.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Buňky 53 B, konstantní velikost (0,5 b)</li><li>Spojovaná služba, PVC/SVC (0,5 b)</li><li>QoS – třídy CBR/VBR/ABR (0,5 b)</li><li>Důvody neúspěchu (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="essay">
+    <name><text>P06-11 VLAN a 802.1Q (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Vysvětlete, co je <strong>VLAN</strong>, jak funguje <strong>IEEE 802.1Q</strong> a jaký je rozdíl mezi značkovanými a neznačkovanými porty.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>VLAN: softwarová podsíť v Ethernetu. 802.1Q: rozšířený rámec s 12bit identifikátorem VLAN. Tagged porty: více VLAN jedním kabelem. Untagged: pevně v jedné VLAN.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Co je VLAN (0,5 b)</li><li>802.1Q – rozšíření rámce, 12bit ID (0,5 b)</li><li>Tagged vs untagged porty (0,5 b)</li><li>Příklad použití / více VLAN jedním kabelem (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="matching">
+    <name><text>P06-12 QoS třídy → vlastnost</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>přenosovou třídu ATM</strong> k její vlastnosti.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>CBR: konstantní rychlost. VBR: průměr + shluky. ABR: proměnlivá, omezené ztráty.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>CBR</p>]]></text><answer><text>Konstantní přenosová rychlost</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>VBR</p>]]></text><answer><text>Průměrná rychlost + omezený počet buněk ve shluku</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>ABR</p>]]></text><answer><text>Proměnlivá rychlost, omezená ztrátovost</text></answer></subquestion>
+  </question>
+
+  <question type="truefalse">
+    <name><text>P06-13 Token Ring a CSMA/CD</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>Token Ring</strong> používá kruhovou topologii s přístupem k médiu pomocí CSMA/CD.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. Token Ring používá token (oprávnění promluvit), nikoli CSMA/CD.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. Token Ring používá token.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-14 Rychlost FDDI</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jakou rychlost dosahuje technologie <strong>FDDI</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>FDDI dosahuje rychlosti 100 Mb/s.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>10 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>16 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. 16 Mb/s je Token Ring.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>100 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>1 Gb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-15 IEEE 802.1Q vlastnosti</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>VLAN podle IEEE 802.1Q</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>802.1Q: rozšířený rámec, 12bit ID, tagged/untagged porty, desítky VLAN jedním kabelem.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Rozšiřuje formát ethernetového rámce o identifikátor podsítě</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Jedním kabelem lze přenášet desítky VLAN</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Existují značkované a neznačkované porty</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Identifikátor podsítě má 12 bitů</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Vyžaduje speciální optický kabel</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Maximálně 2 VLAN na jeden přepínač</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. 12 bitů = až 4096 VLAN.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-16 Velikost ATM buňky</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jakou <strong>velikost</strong> má ATM buňka?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ATM buňka: 53 bajtů (5 B hlavička + 48 B data).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>64 bajtů</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>53 bajtů (5 B hlavička + 48 B data)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>128 bajtů</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>1500 bajtů</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je max. délka dat v Ethernetu.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="essay">
+    <name><text>P06-17 Token Ring vs FDDI vs Ethernet (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Porovnejte <strong>Token Ring, FDDI a Ethernet</strong>: topologie, přístup k médiu, rychlosti a proč se Ethernet prosadil.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Token Ring: kruh, UTP, token, 4/16 Mb/s. FDDI: dva kruhy, optika, token, 100 Mb/s. Ethernet: sběrnice→hvězda, CSMA/CD, 10 Mb/s→terabity. Ethernet: jednoduchost, nízká cena, škálovatelnost.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Token Ring: topologie, rychlost, token (0,5 b)</li><li>FDDI: dva kruhy, optika, 100 Mb/s (0,5 b)</li><li>Ethernet: vývoj topologie a rychlostí (0,5 b)</li><li>Důvody prosazení Ethernetu (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="shortanswer">
+    <name><text>P06-18 Zkratka FDDI</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Rozviňte zkratku <strong>FDDI</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>FDDI = Fibre Distributed Data Interface.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>Fibre Distributed Data Interface</text></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>Fiber Distributed Data Interface</text></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*Fibre*Distributed*Data*</text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-19 Token Ring vlastnosti</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>Token Ringu</strong> (IEEE 802.5)? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Token Ring: IBM, kruh na UTP, 4/16 Mb/s, přístup tokenem.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Vytvořilo ho IBM</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Kruhová topologie, dvoubodové spoje na UTP</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Rychlost 4, později 16 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Přístup k médiu řízen tokenem</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Přístup k médiu řízen CSMA/CD</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Rychlost 100 Mb/s</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. 100 Mb/s je FDDI.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="truefalse">
+    <name><text>P06-20 FDDI dva kruhy</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>FDDI</strong> používá dva protiběžné kruhy – primární a sekundární – které se navzájem zálohují.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Pravda. Při přerušení primárního kruhu se provoz přesměruje na sekundární.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="cloze">
+    <name><text>P06-21 IEEE 802.1Q doplňování</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>IEEE 802.1Q</strong>:</p>
+<p>Standard rozšiřuje formát {1:SHORTANSWER:=ethernetového~=Ethernet} rámce.</p>
+<p>Identifikátor VLAN má {1:SHORTANSWER:=12~=12 bitů} bitů.</p>
+<p>Existují dva typy portů: {1:SHORTANSWER:=značkované~=tagged} (tagged) a neznačkované (untagged).</p>
+<p>Přidaná položka v rámci se nazývá {1:SHORTANSWER:=TCI~=tci} (Tag Control Information).</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>802.1Q: ethernetový rámec, 12bit VLAN ID, tagged/untagged, TCI.</p>]]></text></generalfeedback>
+    <defaultgrade>4</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P06-22 Koncentrátor Token Ring</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co řeší <strong>koncentrátor</strong> v technologii Token Ring?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Koncentrátor řeší problém s přerušením kruhu – fyzicky hvězda, logicky kruh.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Zvýšení přenosové rychlosti</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Problém s přerušením kruhu – fyzicky hvězda, logicky kruh</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Šifrování dat v kruhu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Směrování mezi sítěmi</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="essay">
+    <name><text>P06-23 QoS v ATM (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Vysvětlete koncept <strong>Quality of Service (QoS)</strong> v ATM. Jaké přenosové třídy existují a jaké parametry lze garantovat?</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>QoS: aplikace žádá parametry (kapacita, zpoždění, rozptyl), ATM garantuje. Třídy: CBR (konstantní), VBR (průměr+shluky), ABR (proměnlivá, omezené ztráty).</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Princip QoS – žádost o parametry, garance (0,5 b)</li><li>Parametry: kapacita, zpoždění, rozptyl (0,5 b)</li><li>CBR + VBR popis (0,5 b)</li><li>ABR popis (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="matching">
+    <name><text>P06-24 Zkratky</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>zkratku</strong> k jejímu významu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>PVC: permanentní okruh. SVC: přepínaný okruh. QoS: garance parametrů. TCI: identifikace VLAN v rámci.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>PVC</p>]]></text><answer><text>Permanentní virtuální okruh – stálý, nastaven správcem</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>SVC</p>]]></text><answer><text>Přepínaný virtuální okruh – vytvářen na žádost aplikace</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>QoS</p>]]></text><answer><text>Quality of Service – garance parametrů přenosu</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>TCI</p>]]></text><answer><text>Tag Control Information – položka identifikující VLAN v rámci</text></answer></subquestion>
+  </question>
+
+</quiz>

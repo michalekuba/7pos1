@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category><text>$course$/Přednáška 07 – Internet: IP, směrování, NAT, ARP, DHCP</text></category>
+  </question>
+
+  <!-- Q1 Single – IP vlastnosti -->
+  <question type="multichoice">
+    <name><text>P07-01 Vlastnosti IP</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaké jsou základní vlastnosti protokolu <strong>IP</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IP je bez spojení (samostatné datagramy) a bez záruk (best effort).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Bez spojení (samostatné datagramy), bez záruk (best effort)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Spojovaný, spolehlivý přenos s potvrzováním</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To popisuje TCP.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Spojovaný, bez záruk</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IP je nespojovaný.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Bez spojení, se zárukou doručení</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IP neposkytuje záruky.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q2 Multi – IP adresa -->
+  <question type="multichoice">
+    <name><text>P07-02 Vlastnosti IP adresy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>IPv4 adrese</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IPv4: 32 bitů, tečkový desítkový zápis, hierarchická (síť/podsíť/počítač), celosvětově jednoznačná.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>32bitové číslo (4 bajty)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Tečkovaný desítkový zápis (např. 147.230.16.8)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Hierarchická struktura: adresa sítě + podsítě + počítače</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Celosvětově jednoznačná</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>128bitové číslo</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. 128 bitů má IPv6.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Zapisuje se jako 6 dvojic šestnáctkových číslic</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je MAC adresa.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q3 T/F – IP 64 bitů -->
+  <question type="truefalse">
+    <name><text>P07-03 Délka IP adresy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>IPv4 adresa má délku <strong>64 bitů</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. IPv4 adresa má 32 bitů (4 bajty).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPv4 = 32 bitů.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q4 Matching – Neveřejné adresy -->
+  <question type="matching">
+    <name><text>P07-04 Neveřejné IP adresy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>neveřejný adresní rozsah</strong> (RFC 1918) ke správné třídě.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>10.0.0.0/8</p>]]></text><answer><text>Velký blok – cca 16 mil. adres</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>172.16.0.0/12</p>]]></text><answer><text>Střední blok – cca 1 mil. adres</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>192.168.0.0/16</p>]]></text><answer><text>Malý blok – cca 65 tis. adres, běžný v domácnostech</text></answer></subquestion>
+  </question>
+
+  <!-- Q5 Multi – NAT -->
+  <question type="multichoice">
+    <name><text>P07-05 Vlastnosti NAT</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>NAT</strong> (Network Address Translation)? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>NAT: mění IP a porty, celá síť pod jednou veřejnou IP, problémy s příchozí komunikací, pozitivní dopad na bezpečnost.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Mění IP adresy a TCP/UDP porty v procházejících datagramech</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Celá lokální síť je adresována jedinou veřejnou IP adresou</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Komunikaci je nutno navazovat zevnitř – vnitřní počítače jsou zvenku nedosažitelné</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Omezení dostupnosti vnitřní sítě má pozitivní dopad na bezpečnost</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Každý počítač v lokální síti má vlastní veřejnou IP adresu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. NAT sdílí jednu veřejnou IP.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>NAT šifruje veškerý procházející provoz</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. NAT nešifruje.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q6 Cloze – IP datagram -->
+  <question type="cloze">
+    <name><text>P07-06 IP datagram – doplňování</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>IP datagramu</strong>:</p>
+<p>Aktuální verze IP je {1:SHORTANSWER:=4~=IPv4}.</p>
+<p>Pole TTL (Time to Live) snižuje každý {1:SHORTANSWER:=směrovač~=router} alespoň o 1.</p>
+<p>Maximální celková délka datagramu je {1:SHORTANSWER:=65535~=65 535} bajtů.</p>
+<p>CRC hlavičky {1:SHORTANSWER:=nezahrnuje~=neobsahuje} data.</p>
+<p>Pole „protokol" určuje, {1:SHORTANSWER:=kterému protokolu 4. vrstvy~=jakému transportnímu protokolu} patří data.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IP verze 4, TTL snižuje směrovač, max. 65 535 B, CRC nezahrnuje data, pole protokol → transportní vrstva.</p>]]></text></generalfeedback>
+    <defaultgrade>5</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <!-- Q7 Single – CIDR -->
+  <question type="multichoice">
+    <name><text>P07-07 CIDR</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>CIDR</strong> (Classless Inter-Domain Routing)?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>CIDR nahradilo původní třídy A/B/C. Síť dostane jen tolik prostoru, kolik potřebuje, a umožňuje agregaci prefixů.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Protokol pro šifrování IP komunikace</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Beztřídní směrování – síť dostane jen tolik prostoru, kolik potřebuje, s agregací prefixů</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Algoritmus pro vyhledávání cest v síti</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Systém pro přidělování MAC adres</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q8 Multi – DHCP -->
+  <question type="multichoice">
+    <name><text>P07-08 Co poskytuje DHCP</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co poskytuje <strong>DHCP</strong> stanici při automatické konfiguraci? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>DHCP: IP adresu, masku podsítě, default route, adresu DNS serveru.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>IP adresu</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Masku podsítě</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Implicitní cestu (default route)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Adresu lokálního DNS serveru</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>MAC adresu síťové karty</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. MAC adresa je pevně daná výrobcem.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Heslo k Wi-Fi síti</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q9 Short – ARP -->
+  <question type="shortanswer">
+    <name><text>P07-09 Zkratka ARP</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Rozviňte zkratku <strong>ARP</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ARP = Address Resolution Protocol.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>Address Resolution Protocol</text></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*Address*Resolution*</text></answer>
+  </question>
+
+  <!-- Q10 Esej – Směrování -->
+  <question type="essay">
+    <name><text>P07-10 Směrování (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Popište princip <strong>směrování</strong> v IP sítích: směrovací tabulka, next hop a princip <strong>longest prefix match</strong>.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Směrovací tabulka: cíl (prefix) + next hop (soused). Rozhodnutí podle adresy příjemce – vybere odpovídající záznamy a použije nejdelší (nejkonkrétnější) prefix. Směruje každé zařízení v Internetu.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Směrovací tabulka: cíl (prefix) + next hop (0,5 b)</li><li>Rozhodnutí podle adresy příjemce (0,5 b)</li><li>Longest prefix match (0,5 b)</li><li>Příklad rozhodnutí nebo default route (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q11 Esej – NAT -->
+  <question type="essay">
+    <name><text>P07-11 NAT (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Vysvětlete <strong>NAT</strong>: princip, konverzní tabulka, typické nasazení a problémy.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>NAT: mění IP+porty, lokální síť s neveřejnými adresami za jednou veřejnou IP. Konverzní tabulka: vytváří se při odchozí komunikaci. Problémy: příchozí komunikace bez záznamu nemožná, narušuje přímou komunikaci (videokonference). Pozitivum: bezpečnost.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Princip – překlad adres a portů (0,5 b)</li><li>Konverzní tabulka – kdy se vytváří záznam (0,5 b)</li><li>Problémy – příchozí komunikace, videokonference (0,5 b)</li><li>Bezpečnostní dopad + typické nasazení (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q12 Matching – RFC stavy -->
+  <question type="matching">
+    <name><text>P07-12 RFC stavy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>stav RFC</strong> k jeho popisu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Proposed standard: návrh. Internet standard: zralé. Experimental: zkoumá se. Historic: nahrazeno. Informational: čistě informační.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Proposed standard</p>]]></text><answer><text>Návrh – ustálené, bez plné implementace</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Internet standard</p>]]></text><answer><text>Zralé, stabilní</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Experimental</p>]]></text><answer><text>Zkoumá se</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Historic</p>]]></text><answer><text>Nahrazeno novějším</text></answer></subquestion>
+  </question>
+
+  <!-- Q13 T/F – Fragmenty skládá směrovač -->
+  <question type="truefalse">
+    <name><text>P07-13 Skládání fragmentů</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Fragmenty IP datagramu jsou <strong>skládány každým směrovačem</strong> na cestě.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. Fragmenty skládá až příjemce datagramu, nikoli směrovače na cestě.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. Skládá až příjemce.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q14 Single – ARP -->
+  <question type="multichoice">
+    <name><text>P07-14 Co dělá ARP</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co zjišťuje protokol <strong>ARP</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ARP zjišťuje MAC (linkovou) adresu z IP adresy.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Z IP adresy zjistí MAC (linkovou) adresu</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Z MAC adresy zjistí IP adresu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je RARP.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Přiděluje IP adresy stanicím</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To dělá DHCP.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Převádí doménové jméno na IP adresu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je DNS.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q15 Multi – Fragmentace -->
+  <question type="multichoice">
+    <name><text>P07-15 Fragmentace IP</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>fragmentaci IP datagramu</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Fragmentace: stejný ID, posun udává pozici, MF příznak u všech kromě posledního, Don't Fragment zakazuje fragmentaci, skládá příjemce.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Všechny fragmenty mají stejný identifikátor</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Posun fragmentu udává pozici dat v původním datagramu</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Příznak „More Fragments" je nastaven u všech fragmentů kromě posledního</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Příznak „Don't Fragment" zakazuje fragmentaci datagramu</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Fragmenty skládá každý směrovač na cestě</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Skládá až příjemce.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Fragmentace zvyšuje efektivitu přenosu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Fragmentace efektivitu snižuje.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q16 Single – TTL -->
+  <question type="multichoice">
+    <name><text>P07-16 TTL</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>TTL</strong> (Time to Live) v IP datagramu?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>TTL: každý směrovač zmenší alespoň o 1, při vynulování zahodí – ochrana proti zacyklení.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Čas odeslání datagramu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Počítadlo snižované směrovači – při vynulování se datagram zahodí (ochrana proti zacyklení)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Maximální doba čekání na odpověď</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Typ šifrování datagramu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q17 Esej – DHCP -->
+  <question type="essay">
+    <name><text>P07-17 DHCP (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Vysvětlete <strong>DHCP</strong>: co poskytuje, popište 4 kroky transakce (DORA) a koncept pronájmu adresy.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>DHCP poskytuje IP, masku, default route, DNS. Transakce: Discovery (broadcast), Offer (nabídka), Request (žádost), Acknowledge (potvrzení). Adresa je pronajata na omezenou dobu, poté se žádá o prodloužení.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Co DHCP poskytuje (0,5 b)</li><li>Discovery + Offer (0,5 b)</li><li>Request + Acknowledge (0,5 b)</li><li>Pronájem na omezenou dobu + prodloužení (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q18 Short – Neveřejné adresy -->
+  <question type="shortanswer">
+    <name><text>P07-18 Neveřejné IP rozsahy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Uveďte <strong>tři rozsahy neveřejných</strong> (privátních) IPv4 adres podle RFC 1918.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16</text></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>10.0.0.0, 172.16.0.0, 192.168.0.0</text></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*10.0*172.16*192.168*</text></answer>
+  </question>
+
+  <!-- Q19 Multi – Hierarchie přidělování -->
+  <question type="multichoice">
+    <name><text>P07-19 Hierarchie přidělování IP adres</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaká je <strong>hierarchie přidělování IP adres</strong>? (Vyberte všechny správné úrovně.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IANA → RIR (RIPE NCC, ARIN, LACNIC, APNIC, AFRINIC) → LIR (ISP) → zákazník.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>IANA (centrální autorita)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>RIR – regionální registr (RIPE NCC, ARIN, APNIC...)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>LIR – poskytovatel Internetu</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Zákazník</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>IEEE (standardizační organizace)</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IEEE standardizuje síťové technologie, nepřiděluje IP.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>DNS server</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. DNS překládá jména na IP, nepřiděluje je.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q20 T/F – ICMP -->
+  <question type="truefalse">
+    <name><text>P07-20 ICMP</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>ICMP</strong> slouží k přenosu uživatelských dat mezi aplikacemi.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. ICMP jsou servisní hlášení IP (chyby, ping, informační zprávy).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. ICMP = servisní hlášení.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q21 Cloze – Maska a prefix -->
+  <question type="cloze">
+    <name><text>P07-21 Maska a prefix</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>masce a prefixu</strong>:</p>
+<p>Maska podsítě 255.255.255.0 odpovídá prefixu /{1:SHORTANSWER:=24}.</p>
+<p>IP adresa 147.230.16.8 s touto maskou: adresa sítě (přidělena poskytovatelem) je {1:SHORTANSWER:=147.230}.</p>
+<p>Adresa podsítě je {1:SHORTANSWER:=16}.</p>
+<p>Adresa počítače je {1:SHORTANSWER:=8}.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>255.255.255.0 = /24. IP 147.230.16.8: síť 147.230, podsíť 16, počítač 8.</p>]]></text></generalfeedback>
+    <defaultgrade>4</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <!-- Q22 Single – Longest prefix match -->
+  <question type="multichoice">
+    <name><text>P07-22 Longest prefix match</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaký princip používá směrovač při <strong>výběru záznamu</strong> ze směrovací tabulky?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Longest prefix match – vybere záznam s nejdelším (nejkonkrétnějším) cílovým prefixem.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Vybere první záznam v tabulce</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Longest prefix match – vybere záznam s nejdelším (nejkonkrétnějším) prefixem</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Vybere záznam s nejkratším prefixem</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Vybere náhodný záznam</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <!-- Q23 Esej – ARP, RARP, DHCP -->
+  <question type="essay">
+    <name><text>P07-23 ARP, RARP, DHCP (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Porovnejte <strong>ARP, RARP a DHCP</strong>. Vysvětlete účel každého protokolu a vývojovou návaznost RARP → BOOTP → DHCP.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ARP: z IP zjistí MAC (broadcast dotaz, odpověď). RARP: z MAC zjistí vlastní IP (broadcast, server s tabulkou) – nestačí, chybí další info. BOOTP: rozšíření RARP. DHCP: plná automatická konfigurace (IP, maska, route, DNS), transakce DORA, pronájem adresy.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>ARP: IP→MAC, broadcast (0,5 b)</li><li>RARP: MAC→IP, nedostatečný (0,5 b)</li><li>Vývoj RARP→BOOTP→DHCP (0,5 b)</li><li>DHCP: co poskytuje, DORA, pronájem (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <!-- Q24 Matching – Pole IP datagramu -->
+  <question type="matching">
+    <name><text>P07-24 Pole IP datagramu</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>pole IP datagramu</strong> k jeho významu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>TTL: ochrana proti zacyklení. TOS: požadavky na přepravu. CRC: kontrolní součet hlavičky. Protokol: určení transportního protokolu.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>TTL</p>]]></text><answer><text>Ochrana proti zacyklení – směrovače snižují, při 0 zahodí</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>TOS</p>]]></text><answer><text>Type of Service – požadavky na přepravu</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>CRC hlavičky</p>]]></text><answer><text>Kontrolní součet – nezahrnuje data</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Protokol</p>]]></text><answer><text>Určuje, kterému protokolu 4. vrstvy patří data</text></answer></subquestion>
+  </question>
+
+</quiz>

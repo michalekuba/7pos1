@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category><text>$course$/Přednáška 08 – IPv6</text></category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-01 Délka IPv6 adresy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaká je délka <strong>IPv6 adresy</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IPv6 adresa má 128 bitů (16 bajtů), na rozdíl od IPv4 s 32 bity.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>32 bitů (4 bajty)</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je IPv4.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>64 bitů (8 bajtů)</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>128 bitů (16 bajtů)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>256 bitů (32 bajtů)</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-02 Cíle IPv6</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které z následujících patří mezi <strong>cíle IPv6</strong>? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Cíle: dostatek adres, hierarchické směrování, zabezpečení (IPsec), QoS, vysokorychlostní směrování, mobilita, auto-konfigurace.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Dostatek adres (pokud možno navždy)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Zabezpečení (šifrování a autentizace přímo v IP)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Automatická konfigurace</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Podpora mobilních zařízení</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Zpětná kompatibilita s IPv4 na úrovni datagramů</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPv6 není zpětně kompatibilní s IPv4.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Zmenšení délky adresy oproti IPv4</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPv6 má delší adresy (128 vs. 32 bitů).</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="truefalse">
+    <name><text>P08-03 IPv6 spojovaný</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>IPv6</strong> je spojovaný protokol se zárukami doručení.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. IPv6 je stejně jako IPv4 nespojovaný protokol bez záruk (best effort).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPv6 = nespojovaný, best effort.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="matching">
+    <name><text>P08-04 Typy IPv6 adres</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>typ IPv6 adresy</strong> k jeho popisu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Unicast: jedno rozhraní. Multicast: skupina, všem. Anycast: skupina, nejbližšímu.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Individuální (unicast)</p>]]></text><answer><text>Určuje jedno rozhraní</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Skupinová (multicast)</p>]]></text><answer><text>Určuje skupinu rozhraní, data se doručí všem členům</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>Výběrová (anycast)</p>]]></text><answer><text>Určuje skupinu rozhraní, data se doručí nejbližšímu členovi</text></answer></subquestion>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-05 Hlavička IPv6</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Které <strong>položky obsahuje hlavička IPv6</strong> datagramu? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Hlavička IPv6: verze, třída provozu, značka toku, délka dat, další hlavička, max. skoků, adresy.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Značka toku (flow label) – identifikuje proud souvisejících datagramů</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Další hlavička (next header) – řetězení rozšiřujících hlaviček</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Max. skoků (hop limit) – analogie TTL</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Třída provozu (traffic class) – pro služby s definovanou kvalitou</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>CRC hlavičky</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPv6 nemá CRC hlavičky – kontrolu provádí nižší vrstva.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Posun fragmentu</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Fragmentace je v IPv6 řešena rozšiřující hlavičkou, ne v základní.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="cloze">
+    <name><text>P08-06 IPv6 adresy – doplňování</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>IPv6 adresách</strong>:</p>
+<p>Délka: {1:SHORTANSWER:=128~=128 bitů} bitů.</p>
+<p>Zápis: v {1:SHORTANSWER:=šestnáctkové~=hexadecimální} soustavě.</p>
+<p>Skupiny číslic odděleny {1:SHORTANSWER:=dvojtečkou~=:~=dvojtečkami}.</p>
+<p>Jednu skupinu nulových čtveřic lze nahradit {1:SHORTANSWER:=::~=dvěma dvojtečkami}.</p>
+<p>Základní hlavička IPv6 má konstantní délku {1:SHORTANSWER:=40~=40 B~=40 bajtů} bajtů.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>128 bitů, hex, dvojtečky, :: pro nuly, hlavička 40 B.</p>]]></text></generalfeedback>
+    <defaultgrade>5</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-07 SLAAC</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>SLAAC</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>SLAAC = Stateless Address Autoconfiguration – bezstavová automatická konfigurace, počítač si vše obstará sám z ohlášení směrovače.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Šifrovací protokol pro IPv6</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je IPsec.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Bezstavová automatická konfigurace – počítač si vše obstará sám z ohlášení směrovače</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Směrovací protokol pro IPv6</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Přechodový mechanismus z IPv4 na IPv6</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-08 Přechodové mechanismy</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaké jsou tři základní <strong>přechodové mechanismy</strong> z IPv4 na IPv6? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Dual-stack, tunelování, překlad.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Dual-stack – podporují se oba protokoly</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Tunelování – jeden protokol zabalen do druhého</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Překlad – datagramy se překládají z jednoho do druhého</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Fragmentace – IPv4 datagramy se rozdělí na IPv6</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Emulace – IPv6 se simuluje softwarově nad IPv4</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="shortanswer">
+    <name><text>P08-09 LLA prefix</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Jaký <strong>prefix</strong> mají lokální linkové adresy (Link-Local Address) v IPv6?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>fe80::/10</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>fe80::/10</text></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>fe80::*</text></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>fe80</text></answer>
+  </question>
+
+  <question type="essay">
+    <name><text>P08-10 IPv4 vs IPv6 (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Porovnejte <strong>IPv4 a IPv6</strong>: délka adresy, hlavička, fragmentace a nové funkce IPv6.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IPv4: 32b adresy, proměnlivá hlavička, fragmentace směrovači, CRC. IPv6: 128b adresy, konstantní hlavička 40 B, řetězení rozš. hlaviček, fragmentace jen odesílatelem, bez CRC, nové: značka toku, IPsec, mobilita, SLAAC, ND.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Adresy: 32b vs 128b (0,5 b)</li><li>Hlavička: proměnlivá vs konstantní 40 B + řetězení (0,5 b)</li><li>Fragmentace: směrovač vs jen odesilatel (0,5 b)</li><li>Nové funkce: značka toku, IPsec, SLAAC, ND (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="essay">
+    <name><text>P08-11 Přechodové mechanismy (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Vysvětlete <strong>přechodové mechanismy</strong> z IPv4 na IPv6: dual-stack, tunelování a překlad. Uveďte konkrétní příklady technologií.</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Dual-stack: oba protokoly současně. Tunelování: jeden v druhém (6rd, DS-Lite). Překlad: konverze datagramů (SIIT, NAT64+DNS64, 464XLAT). IPv6 není zpětně kompatibilní.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Dual-stack (0,5 b)</li><li>Tunelování + příklady (6rd, DS-Lite) (0,5 b)</li><li>Překlad + příklady (NAT64, 464XLAT) (0,5 b)</li><li>Důvod potřeby přechodových mechanismů (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="matching">
+    <name><text>P08-12 Speciální prefixy IPv6</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>IPv6 prefix</strong> k jeho významu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>fe80::/10 = LLA; fc00::/7 = ULA; ::1 = loopback; ff00::/8 = multicast.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>fe80::/10</p>]]></text><answer><text>Lokální linková adresa (LLA)</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>fc00::/7</p>]]></text><answer><text>Unikátní lokální adresa (ULA) – analogie RFC 1918</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>::1</p>]]></text><answer><text>Loopback (smyčka)</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>ff00::/8</p>]]></text><answer><text>Skupinová (multicast) adresa</text></answer></subquestion>
+  </question>
+
+  <question type="truefalse">
+    <name><text>P08-13 Hlavička IPv6 – proměnlivá</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Hlavička IPv6 datagramu má <strong>proměnlivou délku</strong> stejně jako u IPv4.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. Základní hlavička IPv6 má konstantní délku 40 B. Volitelné funkce se řeší rozšiřujícími hlavičkami.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPv6 hlavička = 40 B konstantně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-14 Neighbor Discovery</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>Neighbor Discovery (ND)</strong> v IPv6?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ND nahrazuje ARP z IPv4 a přidává další funkce (hledání linkové adresy, ohlášení směrovače apod.).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Nahrazuje ARP z IPv4 + další funkce (hledání linkové adresy, ohlášení směrovače)</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Směrovací protokol pro IPv6</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Šifrovací mechanismus</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Systém pro překlad doménových jmen</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je DNS.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-15 IPsec</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>IPsec</strong> v IPv6? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IPsec: AH (autentizace, ochrana před změnou), ESP (šifrování, preferovaná), databáze bezpečnostní politiky.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>AH (Authentication Header) – ověření odesilatele a ochrana před změnou</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>ESP (Encapsulating Security Payload) – šifrování, preferovaná</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="33.33333" format="html"><text><![CDATA[<p>Databáze bezpečnostní politiky určuje pravidla zpracování datagramů</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Nahrazuje DHCP pro přidělování adres</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Funguje pouze na aplikační vrstvě</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. IPsec je na síťové vrstvě.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-16 Vyčerpání IPv4</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Kdy byla vyčerpána centrální zásoba IPv4 adres u <strong>IANA</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Centrální zásoba IPv4 byla vyčerpána 3. února 2011.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Roku 2005</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Únor 2011</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Roku 2015</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. 2015 se vyčerpal ARIN.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dosud nevyčerpána</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="essay">
+    <name><text>P08-17 Automatická konfigurace IPv6 (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Popište <strong>automatickou konfiguraci</strong> v IPv6: stavovou (DHCPv6) a bezstavovou (SLAAC). Jak funguje SLAAC?</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>DHCPv6: stavová, podobně jako IPv4. SLAAC: bezstavová, počítač si obstará vše sám z ohlášení směrovače (prefix + ochota být implicitním směrovačem), přidá identifikátor rozhraní, ověří ND, začne používat.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>10</responsefieldlines>
+    <minwordlimit>30</minwordlimit><maxwordlimit>300</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>DHCPv6 – stavová, jako IPv4 (0,5 b)</li><li>SLAAC – bezstavová, ohlášení směrovače (0,5 b)</li><li>Postup: prefix + rozhraní + ověření ND (0,5 b)</li><li>Rozdíly DHCPv6 vs SLAAC (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="shortanswer">
+    <name><text>P08-18 Zkratka SLAAC</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Rozviňte zkratku <strong>SLAAC</strong>.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>SLAAC = Stateless Address Autoconfiguration.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format"><text>Stateless Address Autoconfiguration</text></answer>
+    <answer fraction="50" format="moodle_auto_format"><text>*Stateless*Address*Auto*</text></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-19 Řetězení hlaviček</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co platí o <strong>řetězení hlaviček</strong> v IPv6? (Vyberte všechny správné.)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Základní hlavička 40 B konstantní, volitelné se připojují za ni, „další hlavička" určuje typ, urychluje zpracování.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>false</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Základní hlavička má konstantní délku 40 B</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Volitelné hlavičky se připojují za základní hlavičku</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Položka „další hlavička" určuje typ následující hlavičky</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="25" format="html"><text><![CDATA[<p>Konstantní délka urychluje zpracování směrovačem</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Hlavička má proměnlivou délku jako u IPv4</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Základní hlavička je konstantní.</p>]]></text></feedback></answer>
+    <answer fraction="-50" format="html"><text><![CDATA[<p>Řetězení nemá žádné problémy</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. Řetězení je zneužitelné a zvyšuje ztrátovost.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="truefalse">
+    <name><text>P08-20 ULA globálně směrovaná</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>ULA</strong> (Unique Local Address) je globálně směrovaná adresa.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Nepravda. ULA nejsou globálně směrovány – jsou analogií neveřejných adres RFC 1918.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>1</penalty><hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format"><text>true</text><feedback format="html"><text><![CDATA[<p>Nesprávně. ULA nejsou globálně směrovány.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="moodle_auto_format"><text>false</text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="cloze">
+    <name><text>P08-21 Identifikátor rozhraní</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Doplňte údaje o <strong>identifikátoru rozhraní</strong> v IPv6:</p>
+<p>Identifikátor má délku {1:SHORTANSWER:=64~=64 bitů} bitů.</p>
+<p>Původně vycházel z {1:SHORTANSWER:=MAC~=mac~=MAC adresy} adresy.</p>
+<p>RFC {1:SHORTANSWER:=4941} zavádí krátkodobé náhodné adresy (ochrana soukromí).</p>
+<p>RFC {1:SHORTANSWER:=7217} zavádí stabilní náhodné adresy (doporučeno).</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>64 bitů, z MAC adresy, RFC 4941 (krátkodobé), RFC 7217 (stabilní – doporučeno).</p>]]></text></generalfeedback>
+    <defaultgrade>4</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+  </question>
+
+  <question type="multichoice">
+    <name><text>P08-22 Happy Eyeballs</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Co je <strong>Happy Eyeballs</strong> (RFC 8305)?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Happy Eyeballs: algoritmus pro rychlé zahájení komunikace – střídá IPv6 a IPv4, použije první úspěšnou.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden>
+    <single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+    <correctfeedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></correctfeedback><partiallycorrectfeedback format="html"><text><![CDATA[<p>Částečně správně.</p>]]></text></partiallycorrectfeedback><incorrectfeedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></incorrectfeedback><shownumcorrect/>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Bezpečnostní protokol pro IPv6</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Algoritmus střídající IPv6 a IPv4 adresy pro rychlé zahájení komunikace</p>]]></text><feedback format="html"><text><![CDATA[<p>Správně!</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Monitorovací nástroj pro IPv6 sítě</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Protokol pro automatické přidělování IPv6 adres</p>]]></text><feedback format="html"><text><![CDATA[<p>Nesprávně. To je SLAAC nebo DHCPv6.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="essay">
+    <name><text>P08-23 Typy a rozsahy IPv6 adres (esej)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Popište <strong>typy IPv6 adres</strong> (unicast, multicast, anycast) a <strong>speciální rozsahy</strong> (globální unicast, LLA, ULA).</p><p><em>(5–10 vět)</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Unicast: jedno rozhraní (globální, LLA fe80::/10, ULA fc00::/7). Multicast: skupina, všem (ff00::/8). Anycast: skupina, nejbližšímu. Globální unicast: prefix od RIR/48 + podsíť + 64b rozhraní. LLA: platí jen na lince, přidělí si samo. ULA: lokální, analogie RFC 1918.</p>]]></text></generalfeedback>
+    <defaultgrade>2</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+    <responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines>
+    <minwordlimit>40</minwordlimit><maxwordlimit>400</maxwordlimit><attachments>0</attachments><attachmentsrequired>0</attachmentsrequired>
+    <graderinfo format="html"><text><![CDATA[<ul><li>Unicast / multicast / anycast (0,5 b)</li><li>Globální unicast – struktura (0,5 b)</li><li>LLA – prefix, samopřidělení (0,5 b)</li><li>ULA – prefix, analogie RFC 1918 (0,5 b)</li></ul>]]></text></graderinfo>
+    <responsetemplate format="html"><text></text></responsetemplate>
+  </question>
+
+  <question type="matching">
+    <name><text>P08-24 Přechodové mechanismy → popis</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Přiřaďte <strong>přechodový mechanismus</strong> k jeho popisu.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Dual-stack: oba protokoly. 6rd: automatické tunelování. DS-Lite: IPv6 páteř + IPv4 tunely. NAT64: překlad adres.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade><penalty>0.3333333</penalty><hidden>0</hidden><shuffleanswers>true</shuffleanswers>
+    <subquestion format="html"><text><![CDATA[<p>Dual-stack</p>]]></text><answer><text>Podporují se oba protokoly současně</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>6rd</p>]]></text><answer><text>Automatické tunelování – z IPv4 adresy se vytvoří IPv6 prefix</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>DS-Lite</p>]]></text><answer><text>IPv6 páteř poskytovatele, IPv4 se doručuje tunely na centrální NAT</text></answer></subquestion>
+    <subquestion format="html"><text><![CDATA[<p>NAT64</p>]]></text><answer><text>Překlad adres – přístup z IPv6 sítě do IPv4 Internetu</text></answer></subquestion>
+  </question>
+
+</quiz>
