@@ -213,60 +213,72 @@ h1 {
   justify-content: flex-end;
 }
 
-.theme-switch {
+.theme-dropdown {
   position: relative;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr;
+}
+
+.theme-trigger {
+  display: inline-flex;
   align-items: center;
-  gap: 0;
-  padding: 5px;
+  gap: 10px;
+  padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: var(--surface-soft);
-  color: var(--muted);
-  min-width: 110px;
-  height: 42px;
+  background: var(--surface);
+  color: var(--text);
   font-weight: 700;
+  min-height: 42px;
+  justify-content: space-between;
 }
 
-.theme-switch .theme-option {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  line-height: 1;
+.theme-trigger .theme-label {
+  font-size: 0.95rem;
+  flex: 1;
+  text-align: left;
+  min-width: 6ch;
 }
 
-.theme-switch .bi {
+.theme-trigger .theme-icon {
   font-size: 20px;
   line-height: 1;
 }
 
-.theme-switch .theme-thumb {
+.theme-menu {
   position: absolute;
-  top: 4px;
-  bottom: 4px;
-  left: 4px;
-  width: calc(50% - 4px);
-  border-radius: 999px;
-  background: var(--surface);
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 16px;
   border: 1px solid var(--border);
-  transition: transform 180ms ease;
-  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  z-index: 10;
 }
 
-.theme-switch[data-theme='light'] {
+.theme-dropdown.is-open .theme-menu {
+  display: flex;
+}
+
+.theme-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: var(--surface-soft);
   color: var(--text);
+  font-weight: 700;
+  text-align: left;
 }
 
-.theme-switch[data-theme='dark'] {
-  color: var(--text);
-}
-
-.theme-switch[data-theme='dark'] .theme-thumb {
-  transform: translateX(100%);
+.theme-item.is-active {
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface-soft));
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
 .status-row {

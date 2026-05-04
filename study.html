@@ -22,11 +22,27 @@
           <a class="top-link is-active" href="study.html">Studijní přehled</a>
         </nav>
         <div class="theme-float" aria-label="Přepínání motivu">
-          <button id="themeToggle" class="theme-switch" type="button" aria-label="Přepnout motiv">
-            <span class="theme-option" aria-hidden="true"><i class="bi bi-brightness-high-fill" aria-hidden="true"></i></span>
-            <span class="theme-option" aria-hidden="true"><i class="bi bi-moon-fill" aria-hidden="true"></i></span>
-            <span class="theme-thumb" aria-hidden="true"></span>
-          </button>
+          <div class="theme-dropdown">
+            <button id="themeToggle" class="theme-trigger" type="button" aria-label="Přepnout motiv" aria-haspopup="listbox" aria-expanded="false">
+              <i class="bi bi-brightness-high-fill theme-icon" aria-hidden="true"></i>
+              <span class="theme-label">Světlý</span>
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="theme-menu" role="listbox" aria-label="Volba motivu">
+              <button class="theme-item" type="button" role="option" data-theme="light">
+                <i class="bi bi-brightness-high-fill" aria-hidden="true"></i>
+                <span>Světlý</span>
+              </button>
+              <button class="theme-item" type="button" role="option" data-theme="auto">
+                <i class="bi bi-circle-half" aria-hidden="true"></i>
+                <span>Auto</span>
+              </button>
+              <button class="theme-item" type="button" role="option" data-theme="dark">
+                <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+                <span>Tmavý</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="hero card-surface">

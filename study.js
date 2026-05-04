@@ -29,6 +29,7 @@ const state = {
   search: '',
   lecture: '',
   type: '',
+  theme: 'auto',
 };
 
 const els = {};
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
   els.themeToggle = document.getElementById('themeToggle');
+  els.themeDropdown = document.querySelector('.theme-dropdown');
   els.messageBar = document.getElementById('messageBar');
   els.toolbar = document.getElementById('toolbar');
   els.searchInput = document.getElementById('searchInput');
@@ -45,9 +47,13 @@ function init() {
   els.counterLine = document.getElementById('counterLine');
   els.content = document.getElementById('content');
 
+  setupThemeDropdown();
   loadThemePreference();
-  els.themeToggle.addEventListener('click', toggleTheme);
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => applyTheme(getResolvedTheme()));
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (state.theme === 'auto') {
+      applyTheme('auto');
+    }
+  });
 
   els.searchInput.addEventListener('input', () => {
     state.search = els.searchInput.value.trim().toLowerCase();
@@ -509,30 +515,85 @@ function hideMessage() {
 
 function loadThemePreference() {
   const saved = localStorage.getItem('7pos1-theme');
-  if (saved === 'light' || saved === 'dark') {
-    applyTheme(saved);
+  const mode = saved === 'light' || saved === 'dark' || saved === 'auto' ? saved : 'auto';
+  applyTheme(mode);
+}
+
+function setupThemeDropdown() {
+  if (!els.themeDropdown || !els.themeToggle) {
     return;
   }
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(systemDark ? 'dark' : 'light');
-}
 
-function getResolvedTheme() {
-  return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
-}
+  const menu = els.themeDropdown.querySelector('.theme-menu');
+  const items = Array.from(els.themeDropdown.querySelectorAll('.theme-item'));
+  const label = els.themeToggle.querySelector('.theme-label');
+  const icon = els.themeToggle.querySelector('.theme-icon');
 
-function toggleTheme() {
-  const next = getResolvedTheme() === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
-  localStorage.setItem('7pos1-theme', next);
+  els.themeToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = els.themeDropdown.classList.toggle('is-open');
+    els.themeToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      const mode = item.dataset.theme;
+      applyTheme(mode);
+      localStorage.setItem('7pos1-theme', mode);
+      els.themeDropdown.classList.remove('is-open');
+      els.themeToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!els.themeDropdown.contains(event.target)) {
+      els.themeDropdown.classList.remove('is-open');
+      els.themeToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      els.themeDropdown.classList.remove('is-open');
+      els.themeToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  els.themeMenu = menu;
+  els.themeItems = items;
+  els.themeLabel = label;
+  els.themeIcon = icon;
 }
 
 function applyTheme(theme) {
-  const resolved = theme === 'dark' ? 'dark' : 'light';
+  const mode = theme === 'light' || theme === 'dark' || theme === 'auto' ? theme : 'auto';
+  state.theme = mode;
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const resolved = mode === 'auto' ? (systemDark ? 'dark' : 'light') : mode;
   document.documentElement.dataset.theme = resolved;
   if (els.themeToggle) {
-    els.themeToggle.dataset.theme = resolved;
-    els.themeToggle.setAttribute('aria-label', resolved === 'dark' ? 'Tmavý motiv' : 'Světlý motiv');
+    els.themeToggle.dataset.theme = mode;
+    const label = mode === 'dark' ? 'Tmavý motiv' : mode === 'light' ? 'Světlý motiv' : 'Automatický motiv';
+    els.themeToggle.setAttribute('aria-label', label);
+  }
+
+  if (els.themeLabel && els.themeIcon) {
+    const map = {
+      light: { label: 'Světlý', icon: 'bi-brightness-high-fill' },
+      auto: { label: 'Auto', icon: 'bi-circle-half' },
+      dark: { label: 'Tmavý', icon: 'bi-moon-stars-fill' },
+    };
+    const current = map[mode] || map.auto;
+    els.themeLabel.textContent = current.label;
+    els.themeIcon.className = `bi ${current.icon} theme-icon`;
+  }
+
+  if (els.themeItems && els.themeItems.length) {
+    els.themeItems.forEach((item) => {
+      const isActive = item.dataset.theme === mode;
+      item.classList.toggle('is-active', isActive);
+      item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
   }
 }
 

@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', init);
 function init() {
   cacheElements();
   bindEvents();
+  setupThemeDropdown();
   loadThemePreference();
   // If page is opened via file:// the browser blocks fetch for local files.
   // Notify user and stop automatic loading to avoid confusing errors.
@@ -59,6 +60,7 @@ function init() {
 
 function cacheElements() {
   els.themeToggle = document.getElementById('themeToggle');
+  els.themeDropdown = document.querySelector('.theme-dropdown');
   els.quizShell = document.getElementById('quizShell');
   els.summaryShell = document.getElementById('summaryShell');
   els.messageBar = document.getElementById('messageBar');
@@ -74,12 +76,57 @@ function cacheElements() {
 function bindEvents() {
   els.checkButton.addEventListener('click', checkCurrentAnswer);
   els.nextButton.addEventListener('click', goToNextQuestion);
-  els.themeToggle.addEventListener('click', toggleTheme);
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     if (state.theme === 'auto') {
       applyTheme('auto');
     }
   });
+}
+
+function setupThemeDropdown() {
+  if (!els.themeDropdown || !els.themeToggle) {
+    return;
+  }
+
+  const menu = els.themeDropdown.querySelector('.theme-menu');
+  const items = Array.from(els.themeDropdown.querySelectorAll('.theme-item'));
+  const label = els.themeToggle.querySelector('.theme-label');
+  const icon = els.themeToggle.querySelector('.theme-icon');
+
+  els.themeToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = els.themeDropdown.classList.toggle('is-open');
+    els.themeToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      const mode = item.dataset.theme;
+      applyTheme(mode);
+      localStorage.setItem('7pos1-theme', mode);
+      els.themeDropdown.classList.remove('is-open');
+      els.themeToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!els.themeDropdown.contains(event.target)) {
+      els.themeDropdown.classList.remove('is-open');
+      els.themeToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      els.themeDropdown.classList.remove('is-open');
+      els.themeToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  els.themeMenu = menu;
+  els.themeItems = items;
+  els.themeLabel = label;
+  els.themeIcon = icon;
 }
 
 async function loadQuestions() {
@@ -741,34 +788,41 @@ function showMessage(text, level = 'warning') {
 
 function loadThemePreference() {
   const savedTheme = localStorage.getItem('7pos1-theme');
-  if (savedTheme === 'light' || savedTheme === 'dark') {
-    applyTheme(savedTheme);
-    return;
-  }
-
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const resolved = systemDark ? 'dark' : 'light';
-  applyTheme(resolved);
-  localStorage.setItem('7pos1-theme', resolved);
-}
-
-function toggleTheme() {
-  const root = document.documentElement;
-  const currentResolved = root.dataset.theme === 'dark' ? 'dark' : 'light';
-  const next = currentResolved === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
-  localStorage.setItem('7pos1-theme', next);
+  const mode = savedTheme === 'light' || savedTheme === 'dark' || savedTheme === 'auto' ? savedTheme : 'auto';
+  applyTheme(mode);
 }
 
 function applyTheme(theme) {
-  state.theme = theme;
+  const mode = theme === 'light' || theme === 'dark' || theme === 'auto' ? theme : 'auto';
+  state.theme = mode;
   const root = document.documentElement;
-  const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const resolvedTheme = mode === 'auto' ? (systemDark ? 'dark' : 'light') : mode;
 
   root.dataset.theme = resolvedTheme;
   if (els.themeToggle) {
-    els.themeToggle.dataset.theme = resolvedTheme;
-    els.themeToggle.setAttribute('aria-label', resolvedTheme === 'dark' ? 'Tmavý motiv' : 'Světlý motiv');
+    els.themeToggle.dataset.theme = mode;
+    const label = mode === 'dark' ? 'Tmavý motiv' : mode === 'light' ? 'Světlý motiv' : 'Automatický motiv';
+    els.themeToggle.setAttribute('aria-label', label);
+  }
+
+  if (els.themeLabel && els.themeIcon) {
+    const map = {
+      light: { label: 'Světlý', icon: 'bi-brightness-high-fill' },
+      auto: { label: 'Auto', icon: 'bi-circle-half' },
+      dark: { label: 'Tmavý', icon: 'bi-moon-stars-fill' },
+    };
+    const current = map[mode] || map.auto;
+    els.themeLabel.textContent = current.label;
+    els.themeIcon.className = `bi ${current.icon} theme-icon`;
+  }
+
+  if (els.themeItems && els.themeItems.length) {
+    els.themeItems.forEach((item) => {
+      const isActive = item.dataset.theme === mode;
+      item.classList.toggle('is-active', isActive);
+      item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
   }
 }
 
