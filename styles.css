@@ -124,14 +124,14 @@ button {
 .top-link {
   display: inline-flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .top-link.is-active {
@@ -219,24 +219,28 @@ h1 {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 0;
-  padding: 4px;
+  padding: 5px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface-soft);
   color: var(--muted);
-  min-width: 160px;
-  height: 40px;
+  min-width: 110px;
+  height: 42px;
   font-weight: 700;
 }
 
 .theme-switch .theme-option {
   position: relative;
   z-index: 1;
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
+  line-height: 1;
+}
+
+.theme-switch .bi {
+  font-size: 20px;
   line-height: 1;
 }
 
