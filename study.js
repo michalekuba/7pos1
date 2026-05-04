@@ -514,9 +514,8 @@ function hideMessage() {
 }
 
 function loadThemePreference() {
-  const saved = localStorage.getItem('7pos1-theme');
-  const mode = saved === 'light' || saved === 'dark' || saved === 'auto' ? saved : 'auto';
-  applyTheme(mode);
+  applyTheme('auto');
+  localStorage.setItem('7pos1-theme', 'auto');
 }
 
 function setupThemeDropdown() {

@@ -787,9 +787,8 @@ function showMessage(text, level = 'warning') {
 }
 
 function loadThemePreference() {
-  const savedTheme = localStorage.getItem('7pos1-theme');
-  const mode = savedTheme === 'light' || savedTheme === 'dark' || savedTheme === 'auto' ? savedTheme : 'auto';
-  applyTheme(mode);
+  applyTheme('auto');
+  localStorage.setItem('7pos1-theme', 'auto');
 }
 
 function applyTheme(theme) {
