@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7POS1 - studijní přehled (všechny otázky a odpovědi)</title>
+  <meta name="description" content="Statický přehled všech zkouškových otázek z Počítačových sítí 1 (7POS1) s vyznačenými správnými odpověďmi." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="top-row">
+      <div class="theme-float" aria-label="Přepínání motivu">
+        <button id="themeToggle" class="theme-switch" type="button" aria-label="Přepnout motiv">
+          <span class="theme-option" aria-hidden="true">Světlý</span>
+          <span class="theme-option" aria-hidden="true">Tmavý</span>
+          <span class="theme-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="hero card-surface">
+        <div>
+          <p class="eyebrow">Počítačové sítě 1 · studijní režim</p>
+          <h1>Všechny otázky &amp; odpovědi</h1>
+          <p class="hero-copy">Statický přehled všech načtených otázek se zvýrazněnými správnými odpověďmi. Bez klikání, ideální na učení.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button secondary" href="index.html">Spustit test</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="messageBar" class="message-bar card-surface hidden"></section>
+
+    <section id="toolbar" class="study-toolbar card-surface hidden">
+      <div class="toolbar-row">
+        <label class="toolbar-field">
+          <span>Hledat</span>
+          <input id="searchInput" type="search" placeholder="Hledej v otázce nebo v odpovědích…" autocomplete="off">
+        </label>
+        <label class="toolbar-field">
+          <span>Přednáška</span>
+          <select id="lectureFilter"></select>
+        </label>
+        <label class="toolbar-field">
+          <span>Typ</span>
+          <select id="typeFilter">
+            <option value="">Všechny typy</option>
+            <option value="multichoice">Výběr (multichoice)</option>
+            <option value="truefalse">Pravda / Nepravda</option>
+            <option value="shortanswer">Krátká odpověď</option>
+            <option value="matching">Přiřazování</option>
+            <option value="cloze">Doplňování</option>
+            <option value="essay">Esej</option>
+          </select>
+        </label>
+      </div>
+      <p id="counterLine" class="help-text"></p>
+    </section>
+
+    <section id="content" class="study-content"></section>
+  </main>
+
+  <script src="study.js"></script>
+</body>
+</html>
