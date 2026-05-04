@@ -10,21 +10,28 @@
 <body>
   <main class="app-shell">
     <section class="top-row">
-      <div class="theme-float" aria-label="Přepínání motivu">
-        <button id="themeToggle" class="theme-switch" type="button" aria-label="Přepnout motiv">
-          <span class="theme-option" aria-hidden="true">Světlý</span>
-          <span class="theme-option" aria-hidden="true">Tmavý</span>
-          <span class="theme-thumb" aria-hidden="true"></span>
+      <div class="top-bar">
+        <button class="nav-toggle" type="button" aria-label="Otevrit menu" aria-expanded="false" aria-controls="topNav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
         </button>
+        <nav id="topNav" class="top-links" aria-label="Navigace">
+          <a class="top-link" href="index.html">Cvičný test</a>
+          <a class="top-link is-active" href="study.html">Studijní přehled</a>
+        </nav>
+        <div class="theme-float" aria-label="Přepínání motivu">
+          <button id="themeToggle" class="theme-switch" type="button" aria-label="Přepnout motiv">
+            <span class="theme-option" aria-hidden="true">Světlý</span>
+            <span class="theme-option" aria-hidden="true">Tmavý</span>
+            <span class="theme-thumb" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
       <div class="hero card-surface">
         <div>
-          <p class="eyebrow">Počítačové sítě 1 · studijní režim</p>
+          <p class="eyebrow">Počítačové sítě 1</p>
           <h1>Všechny otázky &amp; odpovědi</h1>
-          <p class="hero-copy">Statický přehled všech načtených otázek se zvýrazněnými správnými odpověďmi. Bez klikání, ideální na učení.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="button secondary" href="index.html">Spustit test</a>
         </div>
       </div>
     </section>
@@ -61,5 +68,15 @@
   </main>
 
   <script src="study.js"></script>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const topNav = document.getElementById('topNav');
+    if (navToggle && topNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = topNav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
 </body>
 </html>
