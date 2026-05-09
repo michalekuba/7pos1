@@ -567,6 +567,7 @@ function checkCurrentAnswer() {
   els.checkButton.disabled = true;
   els.nextButton.disabled = false;
   disableCurrentInputs();
+  colorAnswers(state.currentQuestion);
   updateCounters();
 }
 
@@ -727,6 +728,53 @@ function disableCurrentInputs() {
   clozeInputs.forEach((input) => {
     input.disabled = true;
   });
+}
+
+function colorAnswers(question) {
+  if (question.type === 'multichoice' || question.type === 'truefalse') {
+    const inputs = els.answerArea.querySelectorAll('input');
+    inputs.forEach((input) => {
+      const answer = question.answers.find((a) => a.index === Number(input.value));
+      const isCorrect = answer && answer.fraction > 0;
+      const label = input.closest('.option-item');
+      if (!label) return;
+      if (isCorrect) {
+        label.classList.add('is-correct');
+      } else if (input.checked) {
+        label.classList.add('is-wrong');
+      }
+    });
+    return;
+  }
+
+  if (question.type === 'shortanswer') {
+    const input = document.getElementById('shortInput');
+    if (!input) return;
+    const accepted = question.answers.filter((a) => a.fraction > 0).map((a) => normalizeKey(a.textHtml));
+    input.classList.add(accepted.includes(normalizeKey(input.value)) ? 'is-correct' : 'is-wrong');
+    return;
+  }
+
+  if (question.type === 'matching') {
+    const selects = Array.from(els.answerArea.querySelectorAll('select'));
+    selects.forEach((select, index) => {
+      const subquestion = question.subquestions[index];
+      if (!subquestion) return;
+      const correct = normalizeKey(select.value) === normalizeKey(subquestion.answerText);
+      select.closest('.matching-row').classList.add(correct ? 'is-correct' : 'is-wrong');
+    });
+    return;
+  }
+
+  if (question.type === 'cloze') {
+    const inputs = Array.from(els.questionText.querySelectorAll('.cloze-input'));
+    inputs.forEach((input, index) => {
+      const blank = question.clozeBlanks[index];
+      if (!blank) return;
+      const accepted = blank.acceptedAnswers.map((a) => normalizeKey(a));
+      input.classList.add(accepted.includes(normalizeKey(input.value)) ? 'is-correct' : 'is-wrong');
+    });
+  }
 }
 
 function goToNextQuestion() {

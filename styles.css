@@ -585,6 +585,54 @@ textarea {
   display: none !important;
 }
 
+.option-item.is-correct {
+  background: var(--success-weak);
+  border-color: color-mix(in srgb, var(--success) 45%, var(--border));
+}
+
+.option-item.is-wrong {
+  background: var(--danger-weak);
+  border-color: color-mix(in srgb, var(--danger) 35%, var(--border));
+}
+
+.option-item.is-correct input {
+  accent-color: var(--success);
+}
+
+.option-item.is-wrong input {
+  accent-color: var(--danger);
+}
+
+.shortanswer-input.is-correct {
+  border-color: color-mix(in srgb, var(--success) 60%, var(--border));
+  background: var(--success-weak);
+}
+
+.shortanswer-input.is-wrong {
+  border-color: color-mix(in srgb, var(--danger) 50%, var(--border));
+  background: var(--danger-weak);
+}
+
+.matching-row.is-correct select {
+  border-color: color-mix(in srgb, var(--success) 60%, var(--border));
+  background: var(--success-weak);
+}
+
+.matching-row.is-wrong select {
+  border-color: color-mix(in srgb, var(--danger) 50%, var(--border));
+  background: var(--danger-weak);
+}
+
+.cloze-input.is-correct {
+  border-color: color-mix(in srgb, var(--success) 60%, var(--border));
+  background: var(--success-weak);
+}
+
+.cloze-input.is-wrong {
+  border-color: color-mix(in srgb, var(--danger) 50%, var(--border));
+  background: var(--danger-weak);
+}
+
 .summary-shell h2 {
   margin-bottom: 10px;
 }
