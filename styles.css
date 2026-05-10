@@ -215,12 +215,14 @@ h1 {
 
 .theme-dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .theme-trigger {
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: 20px 1fr 16px;
   align-items: center;
-  gap: 10px;
+  column-gap: 10px;
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -228,13 +230,11 @@ h1 {
   color: var(--text);
   font-weight: 700;
   min-height: 42px;
-  justify-content: space-between;
 }
 
 .theme-trigger .theme-label {
   font-size: 0.95rem;
-  flex: 1;
-  text-align: left;
+  text-align: center;
   min-width: 6ch;
 }
 
@@ -247,7 +247,8 @@ h1 {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 200px;
+  width: 100%;
+  min-width: 0;
   display: none;
   flex-direction: column;
   gap: 6px;
@@ -264,16 +265,17 @@ h1 {
 }
 
 .theme-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px 1fr;
   align-items: center;
-  gap: 10px;
+  column-gap: 10px;
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid transparent;
   background: var(--surface-soft);
   color: var(--text);
   font-weight: 700;
-  text-align: left;
+  text-align: center;
 }
 
 .theme-item.is-active {
